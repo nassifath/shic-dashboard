@@ -1,0 +1,108 @@
+.add-project-container {
+  padding: 30px;
+  background-color: #f9fafb;
+}
+
+.page-title {
+  color: #155e2b;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.project-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  margin-bottom: 35px;
+}
+
+.form-section h2 {
+  color: #155e2b;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fafafa;
+}
+
+.input-unit {
+  display: flex;
+}
+
+.input-unit span {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-left: none;
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  font-weight: 600;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+.submit-btn {
+  background-color: #155e2b;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #0f4c20;
+}

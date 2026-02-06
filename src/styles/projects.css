@@ -1,0 +1,385 @@
+/* === CONTAINER PRINCIPAL === */
+.projects-container {
+  padding: 20px 40px;
+  background-color: #f7f9fb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === HEADER === */
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.projects-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.projects-user-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-new {
+  background-color: #007b55;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-new:hover {
+  background-color: #005e3f;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #d4edda;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-info p {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: -3px;
+}
+
+/* === TABS === */
+.projects-tabs {
+  display: flex;
+  gap: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.projects-tabs button {
+  border: none;
+  background: none;
+  font-size: 15px;
+  color: #475569;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.projects-tabs button:hover {
+  color: #007b55;
+}
+
+.projects-tabs button.active {
+  font-weight: 600;
+  color: #007b55;
+  border-bottom: 2px solid #007b55;
+}
+
+/* === LISTE DES CARTES === */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 25px;
+}
+
+/* === CARTE PROJET === */
+.project-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 18px 22px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* === HEADER DE LA CARTE === */
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project-card-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #007b55;
+}
+
+/* === BADGES STATUT === */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.status-badge.in-progress {
+  background-color: #00a6ff;
+}
+
+.status-badge.done {
+  background-color: #10b981;
+}
+
+.status-badge.planned {
+  background-color: #9ca3af;
+}
+
+/* === INFOS === */
+.project-info {
+  font-size: 14px;
+  color: #1f2937;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.project-info strong {
+  font-weight: 600;
+}
+
+/* === PROGRESSION === */
+.progress-section {
+  margin-top: 5px;
+  margin-bottom: 18px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  height: 6px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #007b55;
+  width: 40%;
+  border-radius: 8px;
+}
+
+/* === BOUTONS === */
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.project-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+/* Voir */
+.btn-view {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.btn-view:hover {
+  background-color: #c8e6c9;
+}
+
+/* Modifier */
+.btn-edit {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.btn-edit:hover {
+  background-color: #ffe0b2;
+}
+
+/* Supprimer */
+.btn-delete {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.btn-delete:hover {
+  background-color: #ffcdd2;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .projects-user-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+}
+.projects-tabs-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-new-inline {
+  background-color: #007b55;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-new-inline:hover {
+  background-color: #007b55;
+}
+.projects-table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.projects-table th {
+  background: #004d26;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.projects-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.projects-table tr:hover {
+  background: #f3f3f3;
+}
+
+.restore-btn:hover {
+  background-color: #2e7d32 !important;
+}
+.status-badge.archived {
+  background-color: #6b7280; /* gris */
+}
+.btn-restore {
+  background-color: #e0f2fe; 
+  color: #0369a1;
+}
+
+.btn-restore:hover {
+  background-color: #bae6fd;
+}
+.status-badge.archived {
+  background-color: #6b7280; /* gris */
+}
+
+.btn-restore {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.btn-restore:hover {
+  background-color: #bae6fd;
+}
+.project-card-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #007b55;
+
+  /* Empêche le débordement */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 65%; /* espace laissé au statut */
+}
+/* ===== CARTE PROGRESSION ===== */
+.progression-card {
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.progression-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-percentage {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d7a3e;
+}
+
+/* ===== BARRE DE PROGRESSION ===== */
+.progress-bar-large {
+  width: 100%;
+  height: 14px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  margin-top: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== REMPLISSAGE VERT 🟩 ===== */
+.progress-fill-large {
+  height: 100%;
+  background: #2ecc71; /* VERT PROGRESSION */
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
