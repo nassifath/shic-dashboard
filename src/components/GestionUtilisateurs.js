@@ -1,6 +1,6 @@
 // src/pages/GestionUtilisateurs.jsx
 import React, { useState, useEffect } from "react";
-import API_BASE_URL from '../config/api';
+import config from '../config';  // ✅ CORRIGÉ
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
@@ -112,8 +112,8 @@ export default function GestionUtilisateurs() {
 
       console.log("🚀 Appel au backend pour créer l'utilisateur");
 
-      // ✅ APPEL AU BACKEND (l'admin ne sera PAS déconnecté)
-      const  response = await fetch(`${API_BASE_URL}/create-user`, {
+      // ✅ APPEL AU BACKEND CORRIGÉ (l'admin ne sera PAS déconnecté)
+      const response = await fetch(`${config.API_URL}/create-user`, {  // ✅ CORRIGÉ
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ export default function GestionUtilisateurs() {
       
       // Messages d'erreur plus clairs
       if (err.message.includes("Failed to fetch")) {
-        setError("❌ Impossible de contacter le serveur backend. Vérifiez que le serveur tourne sur http://localhost:5000");
+        setError("❌ Impossible de contacter le serveur backend. Le serveur Render est peut-être endormi. Réessayez dans 30 secondes.");
       } else {
         setError("❌ " + err.message);
       }
@@ -842,4 +842,4 @@ const inputStyle = {
   fontSize: "0.9rem",
   outline: "none",
   transition: "border-color 0.2s"
-}; 
+};
